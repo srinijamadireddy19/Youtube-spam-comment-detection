@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body >
+	<nav class="navbar navbar-expand-lg " style="background-color: #f34f4f;">
+        <div class="container">
+            <!-- Brand/logo -->
+            <a class="navbar-brand text-white" href="#" >App Development</a>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link text-white" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#algorithm">Algorithm Used</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#reports">Classification Report</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#spam-model">Model</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+	<header >
+		<div class="text-center" >
+		<h1  id= "main-head" style="color: rgb(255, 255, 255);"> Youtube Spam Comments  Detection</h1>
+		<p class="font-weight-bold" style="color: rgb(255, 255, 255);">Using Bernoulli Naive Bayes algorithm </p>
+		<p class="font-weight-bold" style="color: rgb(255, 255, 255);">Group 8 </p>
+		</div>
+	</header>
+
+	<div class="text-center" id="about" >
+		<div class="float-start" style="padding: 30px 30px 30px 30px; ">
+			<h3>Helping Content Creators with Spam Filtering Technology</h3>
+			<p style="font-size: 20px;">Spam detection is essential for ensuring the quality and credibility of online platforms like YouTube. Spam comments not only disrupt genuine conversations but also pose risks such as spreading misinformation and deceiving users. By implementing effective spam detection systems, platforms can maintain a conducive environment for meaningful interactions and protect users from potential harm. Furthermore, spam detection is crucial for content creators, as it helps them preserve the integrity of their content and maintain audience trust. Overall, spam detection plays a pivotal role in upholding the integrity, security, and user experience of online communities and content-sharing platforms. </p>
+		</div>
+		<img src="{{ url_for('static', filename='css/spam1.jpg') }}" alt="Girl in a jacket" width="400" height="400" class="rounded float-end">
+	</div>
+
+	<div class="container mt-5 text-center" id="algorithm" >
+		<h3 style="text-align: left;"> Algorithm</h3>
+		<div class="row">
+			<div class="col-sm-6" style="margin-bottom: 30px; text-align: justify;">
+				<p style="font-size: 20px;">The Bernoulli Naive Bayes algorithm, an extension of the Naive Bayes classifier, simplifies text classification tasks by assuming independence among binary features. Its historical roots trace back to Thomas Bayes' work in the 18th century, evolving into a key component of modern machine learning. Its simplicity facilitates broad accessibility and interpretation, making it a popular choice for spam detection, sentiment analysis, and document classification. Despite its simplicity, it offers effective and efficient performance, handling real-time applications and large datasets with ease. Its wide applicability across diverse domains underscores its enduring importance in the field of text mining and machine learning. </p>
+			</div>
+			<div class="col-sm-6">
+				<div >
+					<img src="{{ url_for('static', filename='css/naive.jpg.png') }}" alt="Girl in a jacket" width="400" height="400" class="rounded float-end">				
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	    
+	<div class="container mt-5 text-center" id="reports">
+		<h3> Classification Reports</h3>
+			<div class="row">
+				<div class="col-sm-6" style="margin-bottom: 30px;">
+					<div class="image-item">
+						<img src="{{ url_for('static', filename='css/logistic_regression.jpg') }}" alt="Logistic Regression Classification Report">
+						<div class="image-caption">
+							<p>Logistic Regression</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="image-item">
+						<img src="{{ url_for('static', filename='css/random_forest.jpg') }}" alt="Random Forest Classification Report">
+						<div class="image-caption">
+							<p>Random Forest</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container text-center">
+			<div class="row">
+				<div class="image-item" style="width: 600px;">
+					<img src="{{ url_for('static', filename='css/naive_bayes.jpg') }}" alt="Naïve Bayes Classification Report">
+					<div class="image-caption">
+						<p>Naïve Bayes</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+	<div class="container p-3 my-3 text-white text-justify maincon" id="spam-model">
+		<div class="row">
+		<div class="col-xl-12">
+		<div class="form-group">
+			<form action="{{ url_for('predict')}}" method="POST">
+			<p class="font-weight-bold">Enter Your Comment Here :</p>
+			<!-- <input type="text" name="comment"/> -->
+			<textarea name="comment" rows="5" cols="80" class="text-justify"></textarea>
+			<br/>
+			<button type="submit" class="btn btn-primary font-weight-bold text-white">Predict</button>
+			</form>
+		</div>	
+		</div>	
+		</div>
+	</div>
+
+
+	<footer class="bg-dark text-white mt-5 py-4">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-6">
+			  <h5>Group 8</h5>
+			  <ul>
+				<li>M.Srinija 2211CS030103</li>
+				<li>N.Pravalika 2211CS030127</li>
+				<li>Srinethri Shinde 2211CS030153</li>
+				<li>V.Mamatha 2211CS030168</li>
+			  </ul>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+	  
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	
+</body>
+</html>
+

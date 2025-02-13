@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Result</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}"> 
+    
+</head>
+<body class="maincon">
+
+	<header style="height: 500px;">
+		<div class="text-center" >
+		<h1  id= "main-head" style="color: rgb(255, 255, 255);"> Youtube Spam Comments  Detection</h1>
+		<p class="font-weight-bold" style="color: rgb(255, 255, 255);">Using Bernoulli Naive Bayes algorithm </p>
+		<p class="font-weight-bold" style="color: rgb(255, 255, 255);">Group 8 </p>
+		</div>
+	</header>
+
+	<div class="container p-3 my-3 text-white" >
+		<div class="row">
+			<p class="text-white font-weight-bold">Your Comment is Classified as :</p>
+			<br><br>
+			{% if prediction == 1 %}
+			<p class=" text-center font-weight-bold text-white" >Spam Comment</p>
+			{% else %}
+			<p class=" text-center font-weight-bold text-white" >Not a Spam Comment</p>
+			{% endif %}
+		</div>
+		<div class="form-group">
+			<form action="{{ url_for('home') }}" method="get">
+				<button type="submit" class="btn btn-primary font-weight-bold text-white">Go back</button>
+			  </form>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

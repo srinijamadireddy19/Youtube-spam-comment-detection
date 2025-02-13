@@ -1,0 +1,59 @@
+.model{
+	background-color: #5c1515;
+}
+body{
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.maincon{
+	background-color: #5c2015;
+}
+
+.about{
+	background-color: #e26363;
+}
+
+.jumbotron {
+	padding: 2rem 3rem;
+	margin-bottom: 2rem;
+	background-color: #f16322;
+	border-radius: 0.0rem;
+  }
+
+  .image-item {
+	margin-bottom: 20px; /* Adjust spacing between image items */
+	overflow: hidden; /* Prevent images from overflowing */
+	text-align: center;
+	border: 2px solid black;
+	margin: auto; /* Center content horizontally */
+}
+
+.image-item img {
+	max-width: 100%; /* Ensure images fit within their container */
+	height: auto; /* Maintain aspect ratio */
+	display: inline-block; /* Ensure images are treated as blocks */
+}
+
+.image-caption {
+	background-color: #f8f9fa; /* Background color for caption */
+	padding: 10px; /* Add padding to caption */
+}
+
+header {
+	position: relative;
+	padding-top: 30px;
+    padding: 180px 0; /* Keep the padding as needed */
+    background-image: url('/static/css/main.jpg'); /* Set the path to your background image */
+    background-size: cover; /* Ensure the background image covers the entire header */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-position: center;
+    height: 600px; 
+}
+header h1 {
+	font-size: 50px; /* Large font size for headline */
+	margin-bottom: 20px; /* Spacing between headline and subheadline */
+}
+header p {
+	font-size: 25px;
+	color: white; 
+
+}
