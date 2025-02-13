@@ -1,6 +1,6 @@
 # Youtube-spam-comment-detection
 
-### Spam comments plague online platforms, diminishing user experience and hindering authentic interactions. This project tackles this issue by developing a spam comment detection system powered by the ### Bernoulli Naive Bayes algorithm. This algorithm, renowned for its simplicity and effectiveness in text classification tasks, is adept at distinguishing between spam and non-spam comments based on binary feature vectors representing word presence or absence. 
+Spam comments plague online platforms, diminishing user experience and hindering authentic interactions. This project tackles this issue by developing a spam comment detection system powered by the Bernoulli Naive Bayes algorithm. This algorithm, renowned for its simplicity and effectiveness in text classification tasks, is adept at distinguishing between spam and non-spam comments based on binary feature vectors representing word presence or absence. 
 
 Through meticulous dataset preparation, text pre-processing, and model training, the system aims to automatically filter out irrelevant or harmful comments. The Bernoulli Naive Bayes algorithm is well-suited for this task due to its ability to handle text classification tasks efficiently. By modelling the probability of a comment being spam or non-spam based on the presence or absence of specific words, the algorithm can swiftly and accurately classify comments, even in the presence of noisy data.
 
